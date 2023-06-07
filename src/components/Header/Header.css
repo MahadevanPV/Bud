@@ -1,0 +1,49 @@
+body {
+    background: #1E1E1E;
+}
+
+.mr-8 {
+    margin-right: 8px;
+}
+
+.navBorder{
+    border: 1px solid #2E2E2E;
+    margin: 8px;
+}
+
+.save {
+    width: 83px;
+    left: 1240px;
+    border: 0.5px solid #2E2E2E;
+}
+
+.new {
+    width: 66px;
+    left: 1165px;
+    border: 0.5px solid #AD6CFF;
+}
+
+.explorer {
+    width: 108px;
+    left: 1332px;
+    border: 0.5px solid #2E2E2E;
+}
+
+.btn {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    color: #D8D8D8;
+    background: #1B1B1B;
+}
+
+.btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: rgba(13, 110, 253, 0.25);
+    border-color: #9846DD;
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: #D8D8D8;
+    background-color:#9846DD;
+    border-color: #9846DD;
+}
+
