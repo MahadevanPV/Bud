@@ -13,7 +13,7 @@ function Header() {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" variant="dark" className='navBorder'>
-                <Container>
+                <Container fluid>
                     <Navbar.Brand href="#home"> <img src={budappicon1} alt="Logo" /></Navbar.Brand>
                     <Navbar.Brand href="#home"> <img src={Vector} alt="Logo" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
