@@ -4,8 +4,23 @@
     background-image: radial-gradient(circle, #dee2e64a 1px, transparent 0.5px);
     background-size: 30px 30px;
     border: 1px solid #2E2E2E;
+    padding: 20px;
+    display: flex;
   }
-.container-wrapper{
-    margin: 8px;
-}
+  .container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  
+  
+  
+  
+  
   

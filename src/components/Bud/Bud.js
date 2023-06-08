@@ -7,7 +7,11 @@ const Bud = () => {
     return (
         <div className="container-wrapper">
             <Container fluid className="dotted-background">
-                <Menu />
+                <div className="content-wrapper">
+                    <div className="menu-wrapper d-flex">
+                        <Menu />
+                    </div>
+                </div>
             </Container>
         </div>
     );
