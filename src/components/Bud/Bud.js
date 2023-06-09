@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import '../Bud/Bud.css';
 import Menu from '../Menu/Menu.js'
+import Prompt from '../Prompt/Prompt.js'
 
 const Bud = () => {
     return (
@@ -12,7 +13,10 @@ const Bud = () => {
                         <Menu />
                     </div>
                 </div>
+                <Prompt />
+
             </Container>
+
         </div>
     );
 };
