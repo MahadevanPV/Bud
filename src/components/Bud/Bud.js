@@ -11,10 +11,9 @@ const Bud = () => {
                 <div className="content-wrapper">
                     <div className="menu-wrapper d-flex">
                         <Menu />
+                        <Prompt />
                     </div>
                 </div>
-                <Prompt />
-
             </Container>
 
         </div>
