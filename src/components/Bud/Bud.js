@@ -7,15 +7,16 @@ import Prompt from '../Prompt/Prompt.js'
 const Bud = () => {
     return (
         <div className="container-wrapper">
-            <Container fluid className="dotted-background">
+            <Container fluid>
                 <div className="content-wrapper">
                     <div className="menu-wrapper d-flex">
                         <Menu />
-                        <Prompt />
                     </div>
                 </div>
             </Container>
-
+            <div className="prompt-wrapper">
+                <Prompt />
+            </div>
         </div>
     );
 };

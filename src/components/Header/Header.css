@@ -1,40 +1,20 @@
-body {
-    background: #1E1E1E;
-    overflow-y: hidden;
-}
 
 .mr-8 {
     margin-right: 8px;
 }
 
-.navBorder{
-    border: 1px solid #2E2E2E;
-    margin: 8px;
-}
-
-.save {
-    width: 83px;
-    left: 1240px;
+.save, .explorer, .navBorder {
     border: 0.5px solid #2E2E2E;
 }
 
 .new {
-    width: 66px;
-    left: 1165px;
     border: 0.5px solid #AD6CFF;
-}
-
-.explorer {
-    width: 108px;
-    left: 1332px;
-    border: 0.5px solid #2E2E2E;
 }
 
 .btn {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     color: #D8D8D8;
-    background: #1B1B1B;
 }
 
 .btn:hover {
@@ -47,4 +27,29 @@ body {
     background-color:#9846DD;
     border-color: #9846DD;
 }
-
+svg{
+    margin: 4px 4px 5px 4px !important;
+}
+.fileName::placeholder{
+    color: #D8D8D8;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+}
+.fileName{
+    width: 144px;
+    height: 20px;
+    top: 30px;
+    position: fixed;
+    color: #D8D8D8;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    background: #171717;
+    border: 1px solid #171717;
+}
+.form-control:focus {
+    color: #D8D8D8; 
+    background-color: #171717; 
+    border-color: none; 
+    outline: 0; 
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}

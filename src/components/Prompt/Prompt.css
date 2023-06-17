@@ -2,14 +2,14 @@
     width: 488px;
     min-height: 50px !important;
     max-height: 300px;
-    overflow-y: auto;
+    overflow-y: clip;
     padding: 10px;
     border: none;
     background-color: #0f0f0f;
     color: #959595;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 18px;
     text-align: left;
     vertical-align: top;
@@ -43,7 +43,7 @@ textarea.form-control:focus {
 
 .promptDiv {
     position: fixed;
-    bottom: 18px;
+    bottom: 30px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -54,14 +54,9 @@ textarea.form-control:focus {
     color: greenyellow;
     background: #60A405;
     border: 3px solid #60A405;
-}
-
-.icons-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    padding-right: 27rem;
+    border-radius: 3px;
+    margin: 4px 0px 5px 0px !important;
+    position: relative;
+    bottom: 45px;
+    left: 35vh;
 }

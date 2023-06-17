@@ -10,7 +10,6 @@ import '../Menu/Menu.css';
 
 const Menu = () => {
   return (
-    <div className="menu-container">
       <Container className='menu-wrapper'>
         <Nav defaultActiveKey="/home" className="flex-column">
           <Nav.Item>
@@ -46,7 +45,6 @@ const Menu = () => {
           </Nav.Item>
         </Nav>
       </Container>
-    </div>
   );
 };
 
