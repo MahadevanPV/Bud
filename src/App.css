@@ -16,33 +16,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.react-flow__node-default, .react-flow__node-input, .react-flow__node-output, .react-flow__node-group{
-  background-color: #1E1E1E !important;
-  width: auto !important;
-  border-style: none !important;
-}
-
-.react-flow__node {
-  transform: translate(34px, 100px) !important;
-    position: relative !important;
-    height: 630px !important
-}
-.react-flow__panel{
-  display: none !important;
-}
-
 .react-flow__renderer {
   width: 95% !important;
 }
-.react-flow__nodes{
-  position: absolute;
-  width: 100%;
-  top: -75px !important;
-  left: 0px;
+
+.react-flow__node-default, .react-flow__node-input, .react-flow__node-output, .react-flow__node-group{
+  background-color: #1E1E1E !important;
+  width: 1512px !important;
   border-style: none !important;
+  height: 819px;
 }
-.react-flow__handle{
-  display: none !important;
-}
-
-

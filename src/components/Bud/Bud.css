@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 100vh;
     border: 0.5px solid #2E2E2E;
     margin-top: 7px;
     background-image: radial-gradient(circle at center, #ffffff17 1px, transparent 1px);
