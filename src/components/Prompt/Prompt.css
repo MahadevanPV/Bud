@@ -9,7 +9,7 @@
     color: #959595;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 18px;
     text-align: left;
     vertical-align: top;
@@ -56,7 +56,7 @@ textarea.form-control:focus {
     border: 3px solid #60A405;
     border-radius: 3px;
     margin: 4px 0px 5px 0px !important;
-    position: relative;
-    bottom: 45px;
-    left: 35vh;
+    position: absolute;
+    top: 10px;
+    left: 60vh;
 }
