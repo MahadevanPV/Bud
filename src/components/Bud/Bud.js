@@ -12,7 +12,7 @@ const Bud = ({ handleNewIconClick }) => {
                 <div className="content-wrapper">
                     <div className="menu-wrapper d-flex">
                         <Menu />
-                    </div>
+]                    </div>
                 </div>
             </Container>
             <div className="prompt-wrapper">

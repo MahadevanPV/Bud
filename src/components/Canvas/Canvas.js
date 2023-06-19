@@ -20,7 +20,9 @@ function Flow() {
       id: Date.now().toString(),
       type: 'default',
       position: { x: 0, y: 0 },
-      data: { label: <CombinedNode handleNewNodeClick={handleNewNodeClick} handleEnter={handleEnter} /> },
+      data: { label: '' },
+      extent: 'parent',
+
     };
 
     setNodes((prevNodes) => [...prevNodes, newNode]);
@@ -35,6 +37,7 @@ function Flow() {
     };
 
     setNodes((prevNodes) => [...prevNodes, newNode]);
+    setCreatedNode(newNode);
   };
 
   const [nodes, setNodes] = useState([
@@ -45,6 +48,9 @@ function Flow() {
       data: { label: <CombinedNode handleNewNodeClick={handleNewNodeClick} handleEnter={handleEnter} /> },
     },
   ]);
+
+  const [, setCreatedNode] = useState(null);
+
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
     [setNodes]
