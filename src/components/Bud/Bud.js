@@ -4,7 +4,8 @@ import '../Bud/Bud.css';
 import Menu from '../Menu/Menu.js'
 import Prompt from '../Prompt/Prompt.js'
 
-const Bud = () => {
+const Bud = ({ handleNewIconClick }) => {
+   
     return (
         <div className="container-wrapper">
             <Container fluid>
@@ -15,7 +16,7 @@ const Bud = () => {
                 </div>
             </Container>
             <div className="prompt-wrapper">
-                <Prompt />
+                <Prompt handleIconClick={handleNewIconClick} />
             </div>
         </div>
     );

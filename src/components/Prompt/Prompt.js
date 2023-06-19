@@ -3,12 +3,7 @@ import { Form } from 'react-bootstrap';
 import { ImEnter } from 'react-icons/im';
 import '../Prompt/Prompt.css';
 
-const Prompt = () => {
-    const handleIconClick = () => {
-        // Handle the onClick event for the ImEnter icon here
-        console.log('ImEnter icon clicked!');
-        // Add your custom logic or function calls here
-    };
+const Prompt = ({ handleIconClick }) => {
     return (
         <Form>
             <Form.Group controlId="exampleForm.ControlTextarea">

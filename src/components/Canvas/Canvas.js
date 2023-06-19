@@ -6,21 +6,32 @@ import ReactFlow, { applyNodeChanges, Background } from 'reactflow';
 import 'reactflow/dist/style.css';
 
 
-const CombinedNode = ({ handleNewNodeClick }) => (
+const CombinedNode = ({ handleNewNodeClick, handleEnter }) => (
   <div>
     <Header className="custom-header" handleNewButtonClick={handleNewNodeClick} />
-    <Bud />
+    <Bud handleNewIconClick={handleEnter}/>
   </div>
 );
 
 function Flow() {
+
+  const handleEnter = () => {
+    const newNode = {
+      id: Date.now().toString(),
+      type: 'default',
+      position: { x: 0, y: 0 },
+      data: { label: <CombinedNode handleNewNodeClick={handleNewNodeClick} handleEnter={handleEnter} /> },
+    };
+
+    setNodes((prevNodes) => [...prevNodes, newNode]);
+  };
 
   const handleNewNodeClick = () => {
     const newNode = {
       id: Date.now().toString(),
       type: 'default',
       position: { x: 0, y: 0 },
-      data: { label: <CombinedNode handleNewNodeClick={handleNewNodeClick} /> },
+      data: { label: <CombinedNode handleNewNodeClick={handleNewNodeClick} handleEnter={handleEnter} /> },
     };
 
     setNodes((prevNodes) => [...prevNodes, newNode]);
@@ -31,9 +42,8 @@ function Flow() {
       id: '1',
       type: 'default',
       position: { x: 200, y: 200 },
-      data: { label: <CombinedNode handleNewNodeClick={handleNewNodeClick} /> },
+      data: { label: <CombinedNode handleNewNodeClick={handleNewNodeClick} handleEnter={handleEnter} /> },
     },
-
   ]);
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
