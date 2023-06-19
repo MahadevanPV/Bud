@@ -1,9 +1,9 @@
 .react-flow{
   width: 100%;
   height: 100%;
-  overflow: auto !important;
   position: absolute !important;
-  background-color: #282c34;
+  background-color: #1E1E1E;
+  border: 1px solid #adb5bd45;
 }
 
 .App-header {
@@ -21,11 +21,34 @@
 }
 
 .react-flow__node-default, .react-flow__node-input, .react-flow__node-output, .react-flow__node-group{
-  background-color: #1E1E1E !important;
+  background-color: lightgrey !important;
   width: 1512px !important;
   border-style: none !important;
   height: 819px;
 }
 .react-flow__panel{
   display: none !important;
+}
+
+/* scrollbar style */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: gray; 
 }

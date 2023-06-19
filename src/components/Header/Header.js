@@ -6,7 +6,7 @@ import budappicon1 from '../../images/budappicon.png';
 import { ReactComponent as Stack } from '../../images/stack.svg';
 import { ReactComponent as Star } from '../../images/star.svg';
 import { ReactComponent as Plus } from '../../images/+.svg';
-import { ReactComponent as ProfileIcon } from '../../images/profileIcon.svg';
+import profileIcon from '../../images/profileIcon.png';
 import { BsPersonPlus } from 'react-icons/bs';
 
 function Header({ handleNewButtonClick }) {
@@ -17,9 +17,8 @@ function Header({ handleNewButtonClick }) {
   };
 
   return (
-    <>
       <Navbar collapseOnSelect expand="lg" variant="dark" className='navBorder'>
-        <Container fluid>
+        <Container fluid className='borderClass'>
           <Navbar.Brand href="#home"> <img src={budappicon1} alt="Logo" /></Navbar.Brand>
           <Form>
             <Form.Control
@@ -39,13 +38,12 @@ function Header({ handleNewButtonClick }) {
                 <Button variant="outline-success" className='mr-8 save btn'><Star />Save</Button>
                 <Button variant="outline-success" className='mr-8 explorer btn'><Stack /></Button>
                 <Button variant="outline-success" className='mr-8 explorer btn'><BsPersonPlus /></Button>
-                <ProfileIcon />
+                <img src={profileIcon} alt='profile' className='profileIcon'/>
               </Form>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
   );
 }
 

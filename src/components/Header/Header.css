@@ -4,7 +4,10 @@
 }
 
 .save, .explorer, .navBorder {
-    border: 0.5px solid #2E2E2E;
+    border: 1px solid #adb5bd29;
+}
+.navBorder {
+    background: #1E1E1E;
 }
 
 .new {
@@ -15,6 +18,7 @@
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     color: #D8D8D8;
+    height: 5vh;
 }
 
 .btn:hover {
@@ -38,8 +42,6 @@ svg{
 .fileName{
     width: 144px;
     height: 20px;
-    top: 30px;
-    position: fixed;
     color: #D8D8D8;
     font-size: 12px;
     font-family: 'Roboto Mono', monospace;
@@ -52,4 +54,7 @@ svg{
     border-color: none; 
     outline: 0; 
     box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+.borderClass{
+    border: 0.5px solid #d8d8d82e;
 }

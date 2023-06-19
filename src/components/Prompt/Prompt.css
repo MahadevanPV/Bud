@@ -60,3 +60,28 @@ textarea.form-control:focus {
     top: 10px;
     left: 60vh;
 }
+
+.textarea-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .textarea-wrapper {
+    flex: 1;
+  }
+  
+  .icon-wrapper {
+    position: relative;
+    margin-left: -30px; /* Adjust this value to position the image */
+    cursor: pointer;
+  }
+  
+  .enter-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 47px;
+    height: 26px;
+  }
+  
