@@ -1,24 +1,34 @@
-
 .mr-8 {
     margin-right: 8px;
 }
 
-.save, .explorer, .navBorder {
+.save {
     border: 1px solid #adb5bd29;
+    width: 83px;
+    height: 28px;
 }
+
+.explorer {
+    border: 1px solid #adb5bd29;
+    width: 33px;
+    height: 28px;
+}
+
 .navBorder {
     background: #1E1E1E;
+    border: 1px solid #adb5bd29;
 }
 
 .new {
     border: 0.5px solid #AD6CFF;
+    width: 66px;
+    height: 28px;
 }
 
 .btn {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     color: #D8D8D8;
-    height: 5vh;
 }
 
 .btn:hover {
@@ -26,20 +36,24 @@
     background-color: rgba(13, 110, 253, 0.25);
     border-color: #9846DD;
 }
-.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
     color: #D8D8D8;
-    background-color:#9846DD;
+    background-color: #9846DD;
     border-color: #9846DD;
 }
-svg{
-    margin: 4px 4px 5px 4px !important;
-}
-.fileName::placeholder{
+
+.fileName::placeholder {
     color: #D8D8D8;
     font-size: 12px;
     font-family: 'Roboto Mono', monospace;
 }
-.fileName{
+
+.fileName {
     width: 144px;
     height: 20px;
     color: #D8D8D8;
@@ -48,13 +62,15 @@ svg{
     background: #171717;
     border: 1px solid #171717;
 }
+
 .form-control:focus {
-    color: #D8D8D8; 
-    background-color: #171717; 
-    border-color: none; 
-    outline: 0; 
-    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+    color: #D8D8D8;
+    background-color: #171717;
+    border-color: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
 }
-.borderClass{
-    border: 0.5px solid #d8d8d82e;
+
+.borderClass {
+    border:1px solid #d8d8d817;
 }

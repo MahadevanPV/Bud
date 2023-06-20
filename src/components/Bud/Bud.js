@@ -3,8 +3,7 @@ import { Container } from 'react-bootstrap';
 import '../Bud/Bud.css';
 import Menu from '../Menu/Menu.js'
 import Prompt from '../Prompt/Prompt.js'
-import '../../App.css'
-const Bud = ({ handleNewIconClick }) => {
+const Bud = ({ handleEnterClick }) => {
 
     return (
         <div className="container-wrapper">
@@ -17,7 +16,7 @@ const Bud = ({ handleNewIconClick }) => {
                 </div>
             </Container>
             <div className="prompt-wrapper">
-                <Prompt handleIconClick={handleNewIconClick} />
+                <Prompt handleEnterClick={handleEnterClick} />
             </div>
         </div>
     );

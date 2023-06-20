@@ -1,22 +1,18 @@
-.chat-textarea {
-    width: 488px;
-    min-height: 50px !important;
-    max-height: 300px;
-    overflow-y: clip;
-    padding: 10px;
-    border: none;
-    background-color: #0f0f0f;
-    color: #959595;
-    font-family: 'DM Sans', sans-serif;
-    font-style: normal;
-    font-size: 13px;
-    line-height: 18px;
-    text-align: left;
-    vertical-align: top;
-    margin-bottom: 2px;
-    box-sizing: border-box;
-    box-shadow: 0px 13px 45px rgba(0, 0, 0, 0.62);
-    resize: none;
+.chat-textarea, textarea.form-control:focus {
+  width: 488px;
+  border: 1px solid #171717;
+  background-color: #0f0f0f;
+  color: #959595;
+  box-sizing: border-box;
+  box-shadow: 0px 13px 45px rgba(0, 0, 0, 0.62);
+  resize: none;
+  height: 60px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 1.2rem 0.75rem;
 }
 
 .chat-textarea::placeholder {
@@ -31,14 +27,6 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-}
-
-textarea.form-control:focus {
-    color: #ffff;
-    background-color: #0f0f0f !important;
-    border: none;
-    outline: 0;
-    box-shadow: 0px 13px 45px rgba(0, 0, 0, 0.62);
 }
 
 .promptDiv {
@@ -69,13 +57,6 @@ textarea.form-control:focus {
   .textarea-wrapper {
     flex: 1;
   }
-  
-  .icon-wrapper {
-    position: relative;
-    margin-left: -30px; /* Adjust this value to position the image */
-    cursor: pointer;
-  }
-  
   .enter-icon {
     position: absolute;
     top: 50%;
