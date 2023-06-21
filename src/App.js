@@ -17,18 +17,15 @@ function App() {
   const flowRef = useRef(null);
 
   const handleEnterClick = () => {
-    const flowDimensions = flowRef.current.getBoundingClientRect();
-    const centerPosition = {
-      x: flowDimensions.width / 2 - 100, // Subtract half of the node width
-      y: flowDimensions.height / 2 - 50, // Subtract half of the node height
-    };
 
     const newNodes = [
       {
         id: 'A',
         type: 'custom-node',
-        targetPosition: 'top',
-        position: centerPosition,
+        position: {
+          x:  520, 
+          y:  100,
+        },
         data: { label:'' },
         style: {
           position: 'absolute',
@@ -38,15 +35,16 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '13px',
-          top: '140px',
-          left: '-130px',
         }
       },
       {
         id: 'B',
-        data: { label: 'textbox',image: Head },
+        data: { label: '',image: Head },
         type: 'custom-node',
-        position: { x: 10, y: 90 },
+        position: {
+          x:  527, 
+          y:  108,
+        },
         style: {
           position:'absolute',
           width: 294,
@@ -55,47 +53,51 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
-          left: '34.9%',
-          top: '6px',
         }
       },
       {
         id: 'C',
         data: { label: '' },
         type: 'custom-node',
-        position: { x: 10, y: 90 },
+        position: {
+          x:  934, 
+          y:  108,
+        },
         style: {
           width: 66,
-          height: 20,
+          height: 25,
           background: '#111111',
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
-          left: '61.4%',
-          top: '6px',
         }
       },
       {
         id: 'D',
         type: 'custom-node',
-        data: { label: 'child node 1', image: Squishy },
-        position: { x: 10, y: 10 },
+        data: { image: Squishy },
+        position: {
+          x:  528, 
+          y:  142,
+        },
         style: {
+          position:'absolute',
           width: 471,
           height: 254,
           background: '#111111',
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
-          left: '34.9%',
-          top: '112px',
         },
       },
       {
         id: 'E',
         type: 'custom-node',
-        data: { label: 'child node 2', image: Squishy1 },
-        position: { x: 10, y: 90 },
+        data: { image: Squishy1 },
+        position: {
+          x:  527, 
+          y:  399,
+        },
         style: {
           width: 99,
           height: 73,
@@ -103,15 +105,16 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
-          left: '34.9%',
-          top: '293px',
         }
       },
       {
         id: 'F',
         type: 'custom-node',
-        data: { label: 'child node 1', image: Squishy2 },
-        position: { x: 10, y: 10 },
+        data: { image: Squishy2 },
+        position: {
+          x:  632, 
+          y:  399,
+        },
         style: {
           width: 99,
           height: 73,
@@ -119,15 +122,16 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
-          left: '41.7%',
-          top: '373px',
         },
       },
       {
         id: 'G',
         type: 'custom-node',
-        data: { label: 'child node 2', image: Squishy3 },
-        position: { x: 10, y: 90 },
+        data: { image: Squishy3 },
+        position: {
+          x:  737, 
+          y:  399,
+        },
         style: {
           width: 99,
           height: 73,
@@ -135,15 +139,16 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
-          left: '48.5%',
-          top: '293px',
         }
       },
       {
         id: 'H',
         type: 'custom-node',
-        data: { label: 'child node 2', image: Squishy4 },
-        position: { x: 10, y: 90 },
+        data: { image: Squishy4 },
+        position: {
+          x:  842, 
+          y:  399,
+        },
         style: {
           width: 99,
           height: 73,
@@ -151,15 +156,16 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
-          left: '55.3%',
-          top: '293px',
         }
       },
       {
         id: 'I',
         type: 'custom-node',
-        data: { label: 'child node 1', image: Generate },
-        position: { x: 10, y: 10 },
+        data: { image: Generate },
+        position: {
+          x:  948, 
+          y:  399,
+        },
         style: {
           width: 53,
           height: 73,
@@ -167,13 +173,12 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
-          left: '62.1%',
-          top: '373px',
         },
       },
 
     ];
-    setNodes(newNodes);
+
+  setNodes(newNodes);
   };
 
   useEffect(() => {

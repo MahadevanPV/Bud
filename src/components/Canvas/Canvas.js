@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import ReactFlow, { Background, applyNodeChanges } from 'reactflow';
+import ReactFlow, { Background, Controls, MiniMap, applyNodeChanges } from 'reactflow';
 import 'reactflow/dist/style.css';
 
 function Node({ data }) {
@@ -36,6 +36,8 @@ function Flow({ nodes, setNodes }) {
   return (
     <ReactFlow nodes={nodes} onNodesChange={onNodesChange} nodeTypes={nodeTypes}>
       <Background />
+      <MiniMap nodeStrokeWidth={3} zoomable pannable />
+      <Controls />
     </ReactFlow>
   );
 }
