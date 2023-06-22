@@ -8,6 +8,7 @@ import Squishy1 from './images/Squishy1.svg';
 import Squishy2 from './images/Squishy2.svg';
 import Squishy3 from './images/Squishy3.svg';
 import Squishy4 from './images/Squishy4.svg';
+import Squishy5 from './images/Squishy5.svg';
 import Head from './images/Head.svg';
 import Generate from './images/Generate.svg';
 
@@ -15,6 +16,8 @@ import Generate from './images/Generate.svg';
 function App() {
   const [nodes, setNodes] = useState([]);
   const flowRef = useRef(null);
+  const [, setShowTextarea] = useState(false);
+
 
   const handleEnterClick = () => {
 
@@ -23,7 +26,7 @@ function App() {
         id: 'A',
         type: 'custom-node',
         position: {
-          x:  520, 
+          x:  240, 
           y:  100,
         },
         data: { label:'' },
@@ -42,7 +45,7 @@ function App() {
         data: { label: '',image: Head },
         type: 'custom-node',
         position: {
-          x:  527, 
+          x:  246, 
           y:  108,
         },
         style: {
@@ -60,7 +63,7 @@ function App() {
         data: { label: '' },
         type: 'custom-node',
         position: {
-          x:  934, 
+          x:  655, 
           y:  108,
         },
         style: {
@@ -77,7 +80,7 @@ function App() {
         type: 'custom-node',
         data: { image: Squishy },
         position: {
-          x:  528, 
+          x:  249, 
           y:  142,
         },
         style: {
@@ -95,7 +98,7 @@ function App() {
         type: 'custom-node',
         data: { image: Squishy1 },
         position: {
-          x:  527, 
+          x:  247, 
           y:  399,
         },
         style: {
@@ -112,7 +115,7 @@ function App() {
         type: 'custom-node',
         data: { image: Squishy2 },
         position: {
-          x:  632, 
+          x:  353, 
           y:  399,
         },
         style: {
@@ -129,7 +132,7 @@ function App() {
         type: 'custom-node',
         data: { image: Squishy3 },
         position: {
-          x:  737, 
+          x:  457, 
           y:  399,
         },
         style: {
@@ -146,7 +149,7 @@ function App() {
         type: 'custom-node',
         data: { image: Squishy4 },
         position: {
-          x:  842, 
+          x:  561, 
           y:  399,
         },
         style: {
@@ -163,7 +166,7 @@ function App() {
         type: 'custom-node',
         data: { image: Generate },
         position: {
-          x:  948, 
+          x:  667, 
           y:  399,
         },
         style: {
@@ -179,6 +182,64 @@ function App() {
     ];
 
   setNodes(newNodes);
+  setShowTextarea(false);
+  };
+
+  const handleAddNode = () => {
+
+    const newNodes = [
+      {
+        id: 'NewNode1', // Replace with a unique identifier for the new node
+        type: 'custom-node',
+        data: { label: '' }, // Replace with the desired data for the new node
+        position: {
+          x: 900, // Replace with the desired x position for the new node
+          y: 100, // Replace with the desired y position for the new node
+        },
+        style: {
+          position: 'absolute',
+          width: '488px',
+          height: '363px',
+          background: '#111111',
+          border: '1px solid #2E2E2E',
+          backdropFilter: 'blur(13.5px)',
+          borderRadius: '13px',
+        }
+      },
+      {
+        id: 'NewNode2',
+        data: { label: '',image: Head },
+        type: 'custom-node',
+        position: {
+          x:  907, 
+          y:  108,
+        },
+        style: {
+          background: '#111111',
+          border: '1px solid #2E2E2E',
+          backdropFilter: 'blur(13.5px)',
+          borderRadius: '5px',
+        }
+      },
+      {
+        id: 'NewNode3',
+        type: 'custom-node',
+        data: { image: Squishy5 },
+        position: {
+          x:  908, 
+          y:  142,
+        },
+        style: {
+          background: '#111111',
+          border: '1px solid #2E2E2E',
+          backdropFilter: 'blur(13.5px)',
+          borderRadius: '5px',
+        },
+      },
+      // Add more nodes as needed
+    ];
+  
+    setNodes((prevNodes) => [...prevNodes, ...newNodes]);
   };
 
   useEffect(() => {
@@ -205,7 +266,7 @@ function App() {
     <div className="App">
       <Header />
       <div ref={flowRef}>
-        <Flow nodes={nodes} setNodes={setNodes} />
+        <Flow nodes={nodes} setNodes={setNodes} setShowTextarea={setShowTextarea} onAddNode={handleAddNode} />
       </div>
       <Bud handleEnterClick={handleEnterClick} />
     </div>

@@ -1,6 +1,7 @@
-import { useCallback } from 'react';
-import ReactFlow, { Background, Controls, MiniMap, applyNodeChanges } from 'reactflow';
+import { useCallback,useState } from 'react';
+import ReactFlow, { Background, applyNodeChanges } from 'reactflow';
 import 'reactflow/dist/style.css';
+import '../Canvas/Canvas.css';
 
 function Node({ data }) {
   const image = data && data.image;
@@ -22,7 +23,21 @@ function Node({ data }) {
 const nodeTypes = {
   'custom-node': Node,
 };
-function Flow({ nodes, setNodes }) {
+function Flow({ nodes, setNodes, onAddNode }) {
+
+  const [showTextarea, setShowTextarea] = useState(false);
+
+  const onNodeClick = useCallback((event, node) => {
+    if (node.id === 'B') {
+      setShowTextarea(true);
+    }
+    else if (node.id === 'H') {
+      setShowTextarea(false);
+      onAddNode(); // Call the onAddNode function when H node is clicked
+    }
+  }, [onAddNode]);
+
+  
   const onNodesChange = useCallback(
     (changes) => {
       const filteredChanges = changes.filter(
@@ -34,11 +49,10 @@ function Flow({ nodes, setNodes }) {
   );
 
   return (
-    <ReactFlow nodes={nodes} onNodesChange={onNodesChange} nodeTypes={nodeTypes}>
-      <Background />
-      <MiniMap nodeStrokeWidth={3} zoomable pannable />
-      <Controls />
-    </ReactFlow>
+      <ReactFlow nodes={nodes} onNodeClick={onNodeClick} onNodesChange={onNodesChange} nodeTypes={nodeTypes}>
+      <div>{showTextarea && <div className='textBox'><span className='sideBorder'></span><textarea className='canvasText' /></div>}</div>
+        <Background />
+      </ReactFlow>
   );
 }
 

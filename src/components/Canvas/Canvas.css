@@ -1,0 +1,70 @@
+.canvasText {
+    width: 477px !important;
+    height: 59px !important;
+    border: 1px solid #d8d8d82b;
+    background-color: #111111;
+    color: #959595;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 12px;
+    position: absolute;
+    top: 6px;
+    transform: translate(5px, 0px);
+    z-index: 9;
+    line-height: 18px;
+    text-align: left;
+    resize: none;
+}
+
+.canvasText::placeholder {
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+    opacity: 0.51;
+    color: #959595;
+    position: absolute;
+    border: 1px solid #d8d8d82b;
+    top: 50%;
+}
+
+.textBox {
+    height: 73px !important;
+    width: 488px !important;
+    border: 1px solid #d8d8d82b;
+    background-color: #111111;
+    color: #959595;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 12px;
+    top: 10px;
+    transform: translate(243px, 0px);
+    z-index: 9;
+    line-height: 18px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sideBorder {
+    width: 46px;
+    height: 0px;
+    border: 3px solid #9846DD;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 33px;
+    z-index: 99;
+    border-radius: 4px;
+    left: -9px;
+}
+textarea{
+    flex: 1;
+    padding: 15px;
+}
