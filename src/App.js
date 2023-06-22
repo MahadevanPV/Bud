@@ -9,17 +9,22 @@ import Squishy2 from './images/Squishy2.svg';
 import Squishy3 from './images/Squishy3.svg';
 import Squishy4 from './images/Squishy4.svg';
 import Squishy5 from './images/Squishy5.svg';
-import Head from './images/Head.svg';
 import Generate from './images/Generate.svg';
+import TextStar from './images/textStar.svg';
 
 
 function App() {
   const [nodes, setNodes] = useState([]);
   const flowRef = useRef(null);
   const [, setShowTextarea] = useState(false);
+  const [description,setDescription ] = useState(false);
 
 
-  const handleEnterClick = () => {
+  const handleEnterClick = (description) => {
+
+    const trimmedDescription = description.trim();
+    const words = trimmedDescription.split(' ');
+    const limitedDescription = words.slice(0, 8).join(' ');
 
     const newNodes = [
       {
@@ -42,7 +47,7 @@ function App() {
       },
       {
         id: 'B',
-        data: { label: '',image: Head },
+        data: { label: limitedDescription, image:TextStar },
         type: 'custom-node',
         position: {
           x:  246, 
@@ -56,11 +61,16 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
+          fontFamily: "'Roboto Mono',monospace",
+          fontWeight: 400,
+          fontSize: '10px',
+          color:'#959595',
+          padding:'5px',
         }
       },
       {
         id: 'C',
-        data: { label: '' },
+        data: { label: 'Model 1' },
         type: 'custom-node',
         position: {
           x:  655, 
@@ -73,6 +83,11 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
+          fontFamily: "'Roboto Mono',monospace",
+          fontWeight: 400,
+          fontSize: '10px',
+          color:'#959595',
+          padding:'5px'
         }
       },
       {
@@ -182,10 +197,15 @@ function App() {
     ];
 
   setNodes(newNodes);
+  setDescription(description);
   setShowTextarea(false);
   };
 
   const handleAddNode = () => {
+
+    const trimmedDescription = description.trim();
+    const words = trimmedDescription.split(' ');
+    const limitedDescription = words.slice(0, 8).join(' ');
 
     const newNodes = [
       {
@@ -208,7 +228,7 @@ function App() {
       },
       {
         id: 'NewNode2',
-        data: { label: '',image: Head },
+        data: { label: limitedDescription, image:TextStar },
         type: 'custom-node',
         position: {
           x:  907, 
@@ -219,6 +239,13 @@ function App() {
           border: '1px solid #2E2E2E',
           backdropFilter: 'blur(13.5px)',
           borderRadius: '5px',
+          fontFamily: "'Roboto Mono',monospace",
+          fontWeight: 400,
+          fontSize: '10px',
+          color:'#959595',
+          padding:'5px',
+          width: 294,
+          height: 25,
         }
       },
       {
@@ -266,9 +293,9 @@ function App() {
     <div className="App">
       <Header />
       <div ref={flowRef}>
-        <Flow nodes={nodes} setNodes={setNodes} setShowTextarea={setShowTextarea} onAddNode={handleAddNode} />
+        <Flow nodes={nodes} setNodes={setNodes} setShowTextarea={setShowTextarea} onAddNode={handleAddNode} description={description} />
       </div>
-      <Bud handleEnterClick={handleEnterClick} />
+      <Bud handleEnterClick={handleEnterClick} setDescription={setDescription} description={description} />
     </div>
   );
 }

@@ -14,18 +14,20 @@ function Node({ data }) {
   }
 
   return (
-    <div>
-      {image && <img src={image} alt={altText} />}
-      {label && <div>{label}</div>}
+    <div className="node-container">
+      {image && <img src={image} alt={altText} className="node-image" />}
+      {label && <div className="node-label">{label}</div>}
     </div>
   );
 }
+
 const nodeTypes = {
   'custom-node': Node,
 };
-function Flow({ nodes, setNodes, onAddNode }) {
+function Flow({ nodes, setNodes, onAddNode, description }) {
 
   const [showTextarea, setShowTextarea] = useState(false);
+  const [, onChange] = useState('');
 
   const onNodeClick = useCallback((event, node) => {
     if (node.id === 'B') {
@@ -50,7 +52,7 @@ function Flow({ nodes, setNodes, onAddNode }) {
 
   return (
       <ReactFlow nodes={nodes} onNodeClick={onNodeClick} onNodesChange={onNodesChange} nodeTypes={nodeTypes}>
-      <div>{showTextarea && <div className='textBox'><span className='sideBorder'></span><textarea className='canvasText' /></div>}</div>
+      <div>{showTextarea && <div className='textBox'><span className='sideBorder'></span><textarea className='canvasText' defaultValue={description} onChange={(event) => onChange(event.target.value)} /></div>}</div>
         <Background />
       </ReactFlow>
   );

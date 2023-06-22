@@ -68,3 +68,13 @@ textarea{
     flex: 1;
     padding: 15px;
 }
+
+.node-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .node-image {
+    margin-right: 5px; 
+  }
+  
