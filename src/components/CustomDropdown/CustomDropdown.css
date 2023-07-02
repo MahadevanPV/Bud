@@ -1,0 +1,31 @@
+.option-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.selectBox {
+    box-sizing: border-box;
+    position: absolute;
+    width: 104px;
+    height: 52px;
+    background: #141414;
+    border: 1.5px solid #1F1F1F;
+    border-radius: 8px;
+    z-index: 9;
+    transform: translate(735px, 100px);
+}
+
+select {
+    position: absolute;
+    width: 90.65px;
+    height: 27.72px;
+    background: #161616;
+    border-radius: 5px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 11px;
+    color: #D8D8D8;
+    margin-top: 7px;
+    border: none;
+}

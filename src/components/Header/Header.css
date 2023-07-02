@@ -1,76 +1,82 @@
 .mr-8 {
     margin-right: 8px;
-}
-
-.save {
+  }
+  
+  .save,
+  .explorer {
     border: 1px solid #adb5bd29;
+    height: 28px;
+  }
+  
+  .save {
     width: 83px;
-    height: 28px;
-}
-
-.explorer {
-    border: 1px solid #adb5bd29;
+  }
+  
+  .explorer {
     width: 33px;
-    height: 28px;
-}
-
-.navBorder {
-    background: #1E1E1E;
+  }
+  
+  .navBorder {
+    background: #1e1e1e;
     border: 1px solid #adb5bd29;
-}
-
-.new {
-    border: 0.5px solid #AD6CFF;
+  }
+  
+  .new {
+    border: 0.5px solid #ad6cff;
     width: 66px;
     height: 28px;
-}
-
-.btn {
+  }
+  
+  .btn {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
-    color: #D8D8D8;
-}
-
-.btn:hover {
+    color: #d8d8d8;
+  }
+  
+  .btn:hover {
     color: var(--bs-btn-hover-color);
     background-color: rgba(13, 110, 253, 0.25);
-    border-color: #9846DD;
-}
-
-.btn-check:checked+.btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check)+.btn:active {
-    color: #D8D8D8;
-    background-color: #9846DD;
-    border-color: #9846DD;
-}
-
-.fileName::placeholder {
-    color: #D8D8D8;
+    border-color: #9846dd;
+  }
+  
+  .btn-check:checked + .btn,
+  .btn.active,
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check) + .btn:active {
+    color: #d8d8d8;
+    background-color: #9846dd;
+    border-color: #9846dd;
+  }
+  
+  .fileName::placeholder {
+    color: #d8d8d8;
     font-size: 12px;
     font-family: 'Roboto Mono', monospace;
-}
-
-.fileName {
+  }
+  
+  .fileName {
     width: 144px;
     height: 20px;
-    color: #D8D8D8;
+    color: #d8d8d8;
     font-size: 12px;
     font-family: 'Roboto Mono', monospace;
     background: #171717;
     border: 1px solid #171717;
-}
-
-.form-control:focus {
-    color: #D8D8D8;
+  }
+  
+  .form-control:focus {
+    color: #d8d8d8;
     background-color: #171717;
     border-color: none;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
-}
-
-.borderClass {
-    border:1px solid #d8d8d817;
-}
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+  
+  .borderClass {
+    border: 1px solid #d8d8d817;
+  }
+  
+  svg {
+    margin-right: 7px !important;
+  }  
