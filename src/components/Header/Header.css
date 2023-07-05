@@ -4,7 +4,7 @@
   
   .save,
   .explorer {
-    border: 1px solid #adb5bd29;
+    border: 1px solid #adb5bd17;
     height: 28px;
   }
   
@@ -77,6 +77,6 @@
     border: 1px solid #d8d8d817;
   }
   
-  svg {
+  .imgIcon {
     margin-right: 7px !important;
-  }  
+  }

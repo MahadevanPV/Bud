@@ -44,7 +44,7 @@ const Menu = () => {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/services" className="menuStyle">
+            <Nav.Link className="menuStyle">
               <span className="iconWrapper"><img
                             src={Icon5}
                             alt="Enter Icon"                            

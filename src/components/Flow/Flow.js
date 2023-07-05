@@ -93,7 +93,7 @@ const Flow = ({ nodes, setNodes, onAddNode, description, onEditNode }) => {
   return (
     <>
       {showReactFlow && (
-        <ReactFlow
+        <ReactFlow className='addSvg'
           nodes={nodes.filter(node => node.id === 'A' || node.id === 'B' || node.id === 'C' || node.id === 'D'|| node.id === 'E'|| node.id === 'F'|| node.id === 'G'|| node.id === 'H'|| node.id === 'I' || node.id === 'NewNode1' || node.id === 'NewNode2'|| node.id === 'NewNode3')}
           onNodeClick={handleNodeClick}
           onNodesChange={handleNodesChange}
@@ -113,10 +113,10 @@ const Flow = ({ nodes, setNodes, onAddNode, description, onEditNode }) => {
         </ReactFlow>
       )}
       {showEditComponent && (
-        <ReactFlow nodes={nodes.filter(node => node.id === 'EditNode1' || node.id === 'EditNode2' || node.id === 'EditNode3')} onNodeClick={handleNodeClick}
+        <ReactFlow  nodes={nodes.filter(node => node.id === 'EditNode1' || node.id === 'EditNode2' || node.id === 'EditNode3')} onNodeClick={handleNodeClick}
           onNodesChange={handleNodesChange}
           nodeTypes={nodeTypes}>
-          <Background />
+          <Background className='editSvg'/>
           <Search />
           {showTextarea && (
             <CustomTextarea description={description} handleImageClick={handleImageClick} />

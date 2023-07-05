@@ -21,7 +21,7 @@ const Header = ({ handleEnterClick }) => {
     <Navbar collapseOnSelect expand="lg" variant="dark" className="navBorder">
       <Container fluid className="borderClass">
         <Navbar.Brand href="#home">
-          <img src={budappicon1} alt="Logo" />
+          <img src={budappicon1} alt="Logo" className='imgIcon'/>
         </Navbar.Brand>
         <Form>
           <Form.Control
@@ -42,14 +42,14 @@ const Header = ({ handleEnterClick }) => {
                 className="mr-8 new btn d-flex align-items-center"
                 onClick={handleEnterClick}
               >
-                <Plus/> New
+                <Plus className='imgIcon'/> New
               </Button>
               <Button variant="outline-success" className="mr-8 save btn d-flex align-items-center">
-                <Star/> Save
+                <Star className='imgIcon'/> Save
               </Button>
-                <Stack />
-                <Person />
-              <img src={profileIcon} alt="profile" className="profileIcon" />
+                <Stack className='imgIcon'/>
+                <Person className='imgIcon'/>
+              <img src={profileIcon} alt="profile" className="profileIcon imageIcon" />
             </Form>
           </Nav>
         </Navbar.Collapse>
